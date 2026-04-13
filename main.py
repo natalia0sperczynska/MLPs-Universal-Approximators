@@ -151,7 +151,7 @@ def animate_training(history, x, y):
     plt.close(fig)
 
 
-def visualize_results(): # its not only visualization and we also train the models so we can refactor it
+def train_all_functions():
     trained = []
     for name, fn in TARGET_FUNCTIONS.items():
         x, y, x_t, y_t = generate_data(fn[0], n=300, x_min=fn[1][0], x_max=fn[1][1])
@@ -160,7 +160,10 @@ def visualize_results(): # its not only visualization and we also train the mode
         with torch.no_grad():
             pred = m(x_t).detach().cpu().numpy()
         trained.append((name, x, y, pred))
+    return trained
 
+
+def visualize_results(trained): # its not only visualization and we also train the models so we can refactor it
      
     fig, axes = plt.subplots(nrows=len(TARGET_FUNCTIONS), ncols=2, figsize=(10, 14))
     fig.suptitle("True Function vs MLP Approximation", fontsize=16)
@@ -207,8 +210,8 @@ def main():
     b64 = base64.b64encode(data).decode("utf-8")
     HTML(f'<img src="data:image/gif;base64,{b64}" />') # This is for notebook
 
-    visualize_results()
+    trained = train_all_functions()
+    visualize_results(trained)
 
      
-
 if __name__ == "__main__":    main()

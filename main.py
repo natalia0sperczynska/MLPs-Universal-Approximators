@@ -163,7 +163,7 @@ def train_all_functions():
     return trained
 
 
-def visualize_results(trained): # its not only visualization and we also train the models so we can refactor it
+def visualize_results(trained):
      
     fig, axes = plt.subplots(nrows=len(TARGET_FUNCTIONS), ncols=2, figsize=(10, 14))
     fig.suptitle("True Function vs MLP Approximation", fontsize=16)

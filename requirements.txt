@@ -1,8 +1,8 @@
 numpy
 scipy
 pandas
-seaborn
 scikit-learn
 matplotlib
 seaborn
 torch
+ipython

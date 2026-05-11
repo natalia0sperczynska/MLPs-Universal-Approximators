@@ -16,7 +16,11 @@ We tested the model against six distinct behaviors to see how well it adapts:
 
 ### Visualizing Convergence
 
-The code includes a script to capture the training process as it happens. You can find an example in `mlp_convergence.gif`, which shows the neural network's prediction "warping" and eventually snapping to the true function as the loss decreases.
+The code includes a script to capture the training process as it happens. The animation below shows the neural network's prediction warping and eventually snapping to the true function as loss decreases.
+
+<div align="center">
+<img src="mlp_convergence.gif" width="70%" alt="MLP convergence animation"/>
+</div>
 
 ### Setup
 
@@ -25,3 +29,7 @@ To run the experiments yourself, make sure you have the dependencies installed:
 ```bash
 pip install -r requirements.txt
 ```
+
+### Implementation Details
+
+Full implementation, experiments, and analysis are in [`multi_layer_perceptrons.ipynb`](multi_layer_perceptrons.ipynb).

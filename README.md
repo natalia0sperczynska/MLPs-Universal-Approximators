@@ -1,6 +1,6 @@
 # MLPs-Universal-Approximators
 
-This project is a set of numerical experiments designed to empirically demonstrate the **Universal Approximation Theorem**. The goal was to see how a Multi-Layer Perceptron (MLP) with a simple architecture can "learn" and approximate various continuous functions without ever being given the underlying mathematical formula.
+A set of numerical experiments designed to empirically demonstrate the **Universal Approximation Theorem**, developed as a challenge for the Artificial Intelligence 1 course at Wrocław University of Science and Technology. The goal was to see how a Multi-Layer Perceptron (MLP) with a simple architecture can "learn" and approximate various continuous functions without ever being given the underlying mathematical formula.
 
 ### How it works
 
